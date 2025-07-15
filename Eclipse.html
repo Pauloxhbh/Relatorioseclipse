@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relatório de Pokémons - Pokémon Eclipse</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at center, #111 0%, #000 100%);
+      color: #ffffff;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    header img {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 20px;
+    }
+
+    h1 {
+      margin-top: 10px;
+      font-size: 1.8rem;
+      color: #f0c420;
+    }
+
+    form {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 25px;
+      border-radius: 20px;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+      color: #cccccc;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border: none;
+      border-radius: 12px;
+      background-color: #222;
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    input:focus, textarea:focus {
+      outline: 2px solid #f0c420;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 20px;
+      padding: 14px;
+      background-color: #f0c420;
+      color: #000;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #ffe155;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      form {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://i.imgur.com/Em83lv3.png" alt="Logo Pokémon Eclipse" />
+    <h1>Relatório de Pokémons</h1>
+  </header>
+
+  <form action="https://api.sheetmonkey.io/form/ktiHHZmMkDgMdqoJpkCM2e" method="POST">
+    <label for="pokemon">Pokémon</label>
+    <input type="text" id="pokemon" name="Pokémon" required />
+
+    <label for="defeito">Defeito</label>
+    <textarea id="defeito" name="Defeito" required></textarea>
+
+    <label for="observacoes">Observações</label>
+    <textarea id="observacoes" name="Observações"></textarea>
+
+    <label for="melhoria">Recomendação para melhoria</label>
+    <textarea id="melhoria" name="Recomendação para melhoria"></textarea>
+
+    <button type="submit">Enviar Relatório</button>
+  </form>
+</body>
+</html>
